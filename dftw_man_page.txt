@@ -1,0 +1,32 @@
+DFTW(1)                      Directory File Tree Walk                         DFTW(1)
+
+NAME
+       dftw - directory file tree walk
+
+SYNOPSIS
+       dftw < -nf | -nd | -sf > <absoulte_path_of_source_directory>
+       dftw  < -mv > <absoulte_path_of_source_directory> <relative_path_of_destination_directory>
+       dftw  < -cpx > <absoulte_path_of_source_directory> <relative_path_of_destination_directory> [extension_to_ignore]
+
+DESCRIPTION
+
+       dftw  directory file tree walk is a command written in c by Tanmay Damle,which makes use of nftw() system call to do it's operations. 
+       This Command has the ability to list number of directories or files, give file size of all files in a directory, 
+       copy an entire directory with an option to ignore some file extensions or to entirely move a directory's contents to another directory.
+
+   Options
+       -nf     List count of files in a given directory
+       
+       -nd     List count of sub-directories in a given directory
+
+       -sf     List size of files in a given directory
+
+       -mv     Move a directory's contents to another directory
+
+       -cpx    Copy a directory's contents to another directory
+               with an option to ignore 3 extensions which are .c, .pdf, .txt
+
+
+BUGS
+       No known bugs
+                                  2024 June 05                                DFTW(1)

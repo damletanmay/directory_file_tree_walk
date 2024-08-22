@@ -1,0 +1,84 @@
+#!=/bin/bash
+
+# Negative Test Cases
+
+# documentation
+dftw
+
+# less arguments
+dftw -nf 
+dftw -sf 
+dftw -nd 
+dftw -mv
+dftw -cpx 
+
+# more arguments
+dftw -nF ~/Desktop/asp_assignment/assignment_1 asdasd qasdasd asdas 123 das asda agyshjlksjhuygafdfvb abshdnmvkfdjhsvb naads km jbhjvas nabhd nmvm bav sdmkjbfvb nmavsd bnm,nabhvs asldbv basndmn bvbasnmm bvmansjbdhb nmmnbavs bmnajs dm vassa sdn ajsb b n,masbdnmans as dnm absdnm,as nbfaksndb aksb dasn,d. nabs dnmabsdwbhjasb zknjkhvasd j wabs hjdbwashj vah dkbash kavshd klabsjka djvashd hasfzb hjabhv bajkh wha skhkwasfjabs bjwbasj h sjfjsbjk ajkjk aj sasbfh alksjfgna sdhasdnas bnmsda nsm, dkasbndm asdbndam,sdas ndmasbbn
+dftw -sf ~/Desktop/asp_assignment/assignment_1 asdasd qasdasd asdas 123 das asda agyshjlksjhuygafdfvb abshdnmvkfdjhsvb naads km jbhjvas nabhd nmvm bav sdmkjbfvb nmavsd bnm,nabhvs asldbv basndmn bvbasnmm bvmansjbdhb nmmnbavs bmnajs dm vassa sdn ajsb b n,masbdnmans as dnm absdnm,as nbfaksndb aksb dasn,d. nabs dnmabsdwbhjasb zknjkhvasd j wabs hjdbwashj vah dkbash kavshd klabsjka djvashd hasfzb hjabhv bajkh wha skhkwasfjabs bjwbasj h sjfjsbjk ajkjk aj sasbfh alksjfgna sdhasdnas bnmsda nsm, dkasbndm asdbndam,sdas ndmasbbn
+dftw -nd ~/Desktop/asp_assignment/assignment_1 asdasd qasdasd asdas 123 das asda agyshjlksjhuygafdfvb abshdnmvkfdjhsvb naads km jbhjvas nabhd nmvm bav sdmkjbfvb nmavsd bnm,nabhvs asldbv basndmn bvbasnmm bvmansjbdhb nmmnbavs bmnajs dm vassa sdn ajsb b n,masbdnmans as dnm absdnm,as nbfaksndb aksb dasn,d. nabs dnmabsdwbhjasb zknjkhvasd j wabs hjdbwashj vah dkbash kavshd klabsjka djvashd hasfzb hjabhv bajkh wha skhkwasfjabs bjwbasj h sjfjsbjk ajkjk aj sasbfh alksjfgna sdhasdnas bnmsda nsm, dkasbndm asdbndam,sdas ndmasbbn
+dftw -mv ~/Desktop/asp_assignment/assignment_1 asdasd qasdasd asdas 123 das asda agyshjlksjhuygafdfvb abshdnmvkfdjhsvb naads km jbhjvas nabhd nmvm bav sdmkjbfvb nmavsd bnm,nabhvs asldbv basndmn bvbasnmm bvmansjbdhb nmmnbavs bmnajs dm vassa sdn ajsb b n,masbdnmans as dnm absdnm,as nbfaksndb aksb dasn,d. nabs dnmabsdwbhjasb zknjkhvasd j wabs hjdbwashj vah dkbash kavshd klabsjka djvashd hasfzb hjabhv bajkh wha skhkwasfjabs bjwbasj h sjfjsbjk ajkjk aj sasbfh alksjfgna sdhasdnas bnmsda nsm, dkasbndm asdbndam,sdas ndmasbbn
+dftw -cpx ~/Desktop/asp_assignment/assignment_1 asdasd qasdasd asdas 123 das asda agyshjlksjhuygafdfvb abshdnmvkfdjhsvb naads km jbhjvas nabhd nmvm bav sdmkjbfvb nmavsd bnm,nabhvs asldbv basndmn bvbasnmm bvmansjbdhb nmmnbavs bmnajs dm vassa sdn ajsb b n,masbdnmans as dnm absdnm,as nbfaksndb aksb dasn,d. nabs dnmabsdwbhjasb zknjkhvasd j wabs hjdbwashj vah dkbash kavshd klabsjka djvashd hasfzb hjabhv bajkh wha skhkwasfjabs bjwbasj h sjfjsbjk ajkjk aj sasbfh alksjfgna sdhasdnas bnmsda nsm, dkasbndm asdbndam,sdas ndmasbbn
+
+# invalid path
+dftw -sf asdasd
+dftw -nf asdasd 
+dftw -nd asdasd 
+dftw -mv  asassdad adada 
+dftw -cpx asasad asaaasd
+dftw -mv ~/Desktop/testing_a1_1 asdnaj # one correct path one wrong
+dftw -cpx ~/Desktop/testing_a1_1 asdnaj # one correct path one wrong
+
+# wrong option
+dftw -s2f asdasd 
+
+# more args but incorrect paths
+
+dftw -nf ~/Desktop/asp_assignment x
+dftw -nd ~/Desktop/asp_lab/ sa sdasd
+dftw -sf ~/Desktop/asp_lab/ sa  123
+dftw -mv ~/Desktop/asp_lab/ sa as  
+dftw -cpx ~/Desktop/asp_lab/ as asdas 123 
+
+
+#  files instead of directory
+dftw -nf ~/Desktop/asp_assignment/assignment_1/tests
+
+
+# Positive Test Cases
+
+# -nf test cases
+dftw -nf ~/Desktop/asp_lab/
+dftw -nf ~/Desktop/asp_assignment
+
+# -nd test cases
+dftw -nd ~/Desktop/asp_lab/
+dftw -nd ~/Desktop/asp_assignment 
+# -sf test cases
+dftw -sf ~/Desktop/asp_lab/
+dftw -sf ~/Desktop/asp_assignment/
+
+# -mv test cases
+# rm -r ~/Desktop/testing_a1_2
+mkdir ~/Desktop/testing_a1_2
+dftw -mv ~/Desktop/testing_a1_1/// ~/Desktop/testing_a1_2////
+
+mkdir ~/Desktop/testing_a1_1
+dftw -mv ~/Desktop/testing_a1_2/// ~/Desktop/testing_a1_1////
+
+dftw -mv ~/Desktop/testing_a1_1//test1 ~/Desktop/testing_a1_1/test2
+dftw -mv ~/Desktop/testing_a1_1/ ~/Desktop/testing_a1_1/test1 # error
+
+# -cpx test cases
+mkdir ~/Desktop/testing_a1_2
+dftw -cpx ~/Desktop/testing_a1_1/// ~/Desktop/testing_a1_2//// .tXt
+rm -r ~/Desktop/testing_a1_2
+
+mkdir ~/Desktop/testing_a1_2
+dftw -cpx ~/Desktop/testing_a1_1//test1 ~/Desktop/testing_a1_1 .PdF
+rm -r ~/Desktop/testing_a1_2
+
+mkdir ~/Desktop/testing_a1_2
+dftw -cpx ~/Desktop/testing_a1_1/ ~/Desktop/testing_a1_2 .c
+rm -r ~/Desktop/testing_a1_2
+
+dftw -cpx ~/Desktop/testing_a1_1/ ~/Desktop/testing_a1_1/test1 # error 
