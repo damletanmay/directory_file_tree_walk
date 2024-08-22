@@ -9,9 +9,7 @@
 #include <sys/types.h>
 #include <stdbool.h>
 
-// this code can be found in /home/damlet/Desktop/asp_assignment/assignment_1/a1_tanmay_damle_SID.c
-// there's a compile script written, use bash compile_a1 and bash tests_a1 to compile and test the program
-// executable dftw is already put in the $PATH so that it can be run from anywhere
+// put executable dftw in the $PATH so that it can be run from anywhere
 
 // constants
 #define MAX_ARGS 6
@@ -532,7 +530,7 @@ int main(int argc, char *argv[])
     {
         char *buffer = malloc(sizeof(char) * 2000);
 
-        int man_fd = open("/home/damlet/Desktop/asp_assignment/assignment_1/dftw_man_page.txt", O_RDONLY);
+        int man_fd = open("dftw_man_page.txt", O_RDONLY);
 
         if (man_fd == -1)
             exit(-1);
